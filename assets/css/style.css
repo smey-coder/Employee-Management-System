@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* VARIABLES */
+:root {
+    --primary: #667eea;
+    --secondary: #764ba2;
+    --text-color: #333;
+    --error-bg: #ffe6e6;
+    --error-border: #ffb3b3;
+    --error-text: #d93025;
+}
+
+/* BACKGROUND */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg') center/cover no-repeat;
+    color: var(--text-color);
+}
+
+/* CONTAINER */
+.login_and_register {
+    margin: 0 15px;
+}
+
+/* FORM BOX */
+.form-box {
+    width: 600px;
+    max-width: 450px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: none;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.form-box.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* LOGO */
+img.logo {
+    display: block;
+    margin: 0 auto 15px;
+    width: 90px;
+    height: auto;
+}
+
+/* FORM TEXT */
+.form-box p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* INPUT BOX WITH ICON */
+.input-box {
+    position: relative;
+    width: 100%;
+    
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--primary);
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.input-box input:focus + i {
+    color: var(--secondary);
+}
+
+/* SELECT DROPDOWN */
+.form-box select {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: #fff url("data:image/svg+xml;utf8,<svg fill='%23667eea' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.form-box select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+/* BUTTON */
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-box button:hover {
+    background: linear-gradient(135deg, #5a6fe2, #6a3e92);
+    transform: translateY(-2px);
+}
+
+/* LINKS */
+.forgot-password {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+
+.register-text {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.register-text a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+
+/* ERROR MESSAGE */
+.error-message {
+    background: var(--error-bg);
+    border: 1px solid var(--error-border);
+    color: var(--error-text);
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    text-align: left;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .form-box {
+        padding: 50px 20px;
+    }
+    img.logo {
+        width: 70px;
+    }
+    .form-box button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .register-text {
+        font-size: 12px;
+    }
+}
