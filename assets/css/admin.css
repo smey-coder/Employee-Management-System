@@ -29,6 +29,7 @@ body {
 
 /* HEADER */
 header {
+  background-color: #2d71ca;
   z-index: 200;
   width: 100%;
   display: flex;
@@ -130,6 +131,7 @@ header {
   padding: 1rem 0;
   transition: width 0.4s ease;
   overflow-y: auto;
+  
 }
 
 .Sidebar.menu-toggle {
@@ -152,12 +154,10 @@ header {
   transition: background-color 0.3s ease;
 }
 .Sidebar a:hover {
-  background-color: var(--background-hover);
+  background-color: greenyellow;
 }
-.Sidebar a.selected {
-  color: var(--text-selected-color);
-  background-color: var(--background-selected);
-}
+/* .Sidebar a.selected {
+} */
 .Sidebar a.search {
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 0.5rem;
@@ -175,6 +175,10 @@ main {
 }
 main.menu-toggle {
   margin-left: 6rem;
+}
+.main-header{
+  background-color: #171719;
+  border-radius: 5px;
 }
 
 /* RESPONSIVE */
@@ -194,4 +198,34 @@ main.menu-toggle {
   main.menu-toggle {
     margin-left: 14rem;
   }
+}
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.header-left h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #053D4E;
+}
+.header-left .name{
+  color: #32363B;
+}
+
+.header-right {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#manager-name {
+    color: #f1c40f;
 }

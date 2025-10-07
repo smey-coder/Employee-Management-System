@@ -1,0 +1,97 @@
+/* ========== EMPLOYEES PAGE STYLES ========== */
+main {
+  padding: 2rem;
+  background-color: #f8fafc;
+  margin-top: 4.5rem;
+  margin-left: 19rem;
+  padding: 1.5rem;
+  transition: margin-left 0.4s ease;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+/* Add Employee Form */
+.employee-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.employee-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+}
+
+.employee-form input:focus {
+  border-color: #0ea5e9;
+}
+
+.employee-form button {
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.employee-form button:hover {
+  background: #0284c7;
+}
+
+/* Employee Table */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.employee-table th {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.employee-table tr:hover {
+  background: #f1f5f9;
+}
+
+.employee-table a {
+  color: #0ea5e9;
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.employee-table a.delete {
+  color: #ef4444;
+}
+
+.employee-table a:hover {
+  text-decoration: underline;
+}
