@@ -54,9 +54,14 @@ body {
 }
 .card {
   background: white;
-  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+  background-color: #f8fafc;
+  margin-top: 4.5rem;
+  margin-left: 19rem;
+  padding: 1.5rem;
+  transition: margin-left 0.4s ease;
 }
 table {
   width: 100%;
@@ -88,6 +93,7 @@ th {
 </style>
 </head>
 <body>
+<?php include "admin_page.php"; ?>
 <div class="card">
   <h2>Manage Departments</h2>
   <button class="btn" style="margin-bottom:15px;" onclick="openAddDepartmentForm()">+ Add Department</button>

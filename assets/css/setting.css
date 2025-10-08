@@ -1,0 +1,54 @@
+body {
+  background: #f5f7fa;
+  font-family: "Poppins", sans-serif;
+}
+
+.settings-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  background-color: #f8fafc;
+    margin-top: 4.5rem;
+    margin-left: 19rem;
+    padding: 1.5rem;
+    transition: margin-left 0.4s ease;
+}
+
+h2 {
+  text-align: center;
+  color: #1a237e;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn-save {
+  background: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-save:hover {
+  background: #3949ab;
+}

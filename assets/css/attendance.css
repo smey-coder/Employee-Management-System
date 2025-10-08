@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 2rem;
+    background-color: #f8fafc;
+    margin-top: 4.5rem;
+    margin-left: 19rem;
+    padding: 1.5rem;
+    transition: margin-left 0.4s ease;
+}
+h2 {
+    color: #053D4E;
+    margin-bottom: 24px;
+    font-size: 28px;
+    border-bottom: 2px solid #053D4E;
+    padding-bottom: 10px;
+}
+
+.filter-form,
+.add-attendance-form {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.filter-form label,
+.add-attendance-form label {
+    font-weight: 500;
+    color: #053D4E;
+}
+
+.filter-form input[type="date"],
+.add-attendance-form input[type="date"],
+.add-attendance-form select {
+    padding: 7px 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    font-size: 15px;
+    background: #f8f9fa;
+}
+
+.btn-search,
+.btn-add {
+    background: #053D4E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-search:hover,
+.btn-add:hover {
+    background: #176B87;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fff;
+}
+
+th, td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background: #053D4E;
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tr:hover {
+    background: #e9ecef;
+}
+
+.status {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.status.present {
+    background: #d1f7c4;
+    color: #218838;
+    border: 1px solid #b2e7a7;
+}
+
+.status.absent {
+    background: #ffe3e3;
+    color: #c82333;
+    border: 1px solid #f5c6cb;
+}
+
+.status.leave {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.btn-status {
+    padding: 5px 12px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 2px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+.btn-status.present { background: #218838; }
+.btn-status.absent { background: #c82333; }
+.btn-status.leave { background: #856404; }
+
+.btn-status.present:hover { background: #176B87; }
+.btn-status.absent:hover { background: #a71d2a; }
+.btn-status.leave:hover { background: #b8860b; }
+
+@media (max-width: 768px) {
+    .filter-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    table th, table td {
+        font-size: 13px;
+    }
+}

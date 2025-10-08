@@ -171,7 +171,10 @@ if (session_status() === PHP_SESSION_NONE) {
                 text-align: left;
             }
         }
-        </style>
+        .Sidebar a:hover {
+        background-color: rgba(60, 214, 237, 1);
+        }
+    </style>
     </main>
     <?php
     include "footer.php";

@@ -27,3 +27,4 @@ function showForm(formId) {
     registerForm.classList.toggle('active', formId === 'register-form');
     localStorage.setItem('activeForm', formId);
 }
+
