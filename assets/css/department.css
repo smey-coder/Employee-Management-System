@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #4facfe;
+    --secondary-color: #00f2fe;
+    --text-color: #333;
+    --bg-color: #f9fafc;
+    --card-bg: #fff;
+    --border-radius: 12px;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Container */
+.departments-container {
+    margin: 25px;
+    padding: 25px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Header */
+.departments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.departments-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Add Button */
+.add-department-btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-department-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(79, 172, 254, 0.3);
+}
+
+/* Table Styles */
+.departments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.departments-table th,
+.departments-table td {
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.departments-table th {
+    background-color: #f1f5fa;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.departments-table tr:hover {
+    background-color: #f7faff;
+}
+
+/* Action Buttons */
+.action-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Form Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    width: 400px;
+    box-shadow: var(--shadow);
+}
+
+.modal-content h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+}
+
+.modal-content .btn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-content .btn-group button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.save-btn {
+    background-color: #4facfe;
+    color: #fff;
+}
+
+.cancel-btn {
+    background-color: #ddd;
+}
+
+.save-btn:hover {
+    background-color: #00c2fe;
+}
+
+.cancel-btn:hover {
+    background-color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .departments-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .departments-table th,
+    .departments-table td {
+        font-size: 14px;
+    }
+}

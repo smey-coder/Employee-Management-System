@@ -138,7 +138,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Employee Management</title>
-<link rel="stylesheet" href="../assets/css/employee.css">
+<link rel="stylesheet" href="../assets/css/admin_emp.css">
 <style>
 .employee-form {
     background: #f8f9fa;
@@ -297,7 +297,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
 <div class="page-title"><h2>Employee Management</h2></div>
 
 <!-- Add Employee Form -->
-<form class="employee-form" method="POST" action="" enctype="multipart/form-data">
+<form class="employee-form" id="employee-form" method="POST" action="" enctype="multipart/form-data">
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
         <div class="form-group">
             <label>Employee Name *</label>

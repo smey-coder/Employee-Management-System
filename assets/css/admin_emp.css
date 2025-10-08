@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap');
+
+/* ========== VARIABLES ========== */
+:root {
+  --background-color: #ffffff;
+  --text-title-color: #053D4E;
+  --text-color: #32363B;
+  --menu-color: #707780;
+  --text-selected-color: #355CC0;
+  --background-selected: #EBF0FF;
+  --background-hover: #F7F9FA;
+  --border-color: #E6E9ED;
+  --primary-color: #0ea5e9;
+  --primary-hover: #0284c7;
+}
+
+/* ========== GLOBAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* ========== HEADER ========== */
+header {
+  z-index: 200;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* LEFT */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.menu-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.menu {
+  width: 1.6rem;
+  height: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu div {
+  width: 100%;
+  height: 3px;
+  background-color: var(--menu-color);
+  transition: all 0.3s ease;
+}
+.menu.menu-toggle div:first-child {
+  transform: rotate(-35deg) translate(-3px, 5px);
+  width: 60%;
+}
+.menu.menu-toggle div:last-child {
+  transform: rotate(35deg) translate(-3px, -5px);
+  width: 60%;
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand .logo {
+  width: 1.7rem;
+}
+.brand .name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--text-title-color);
+}
+
+/* RIGHT */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.right a {
+  display: flex;
+  align-items: center;
+  border-radius: 0.4rem;
+}
+.right a:hover {
+  background-color: var(--background-hover);
+}
+.right img {
+  width: 1.5rem;
+  margin: 0.4rem;
+}
+.right .user {
+  width: 2.1rem;
+  border-radius: 50%;
+}
+
+/* ========== SIDEBAR ========== */
+.Sidebar {
+  position: fixed;
+  top: 3.8rem;
+  left: 0;
+  width: 18.75rem;
+  height: calc(100vh - 3.8rem);
+  border-right: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  padding: 1rem 0;
+  transition: width 0.4s ease;
+  overflow-y: auto;
+}
+
+.Sidebar.menu-toggle {
+  width: 5rem;
+}
+.Sidebar.menu-toggle a span {
+  display: none;
+}
+
+/* SIDEBAR LINKS */
+.Sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.8rem 1rem;
+  margin: 0 0.6rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+}
+.Sidebar a:hover {
+  background-color: var(--background-hover);
+}
+.Sidebar img {
+  width: 1.5rem;
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+  margin-top: 4.5rem;
+  margin-left: 19rem;
+  padding: 1.5rem;
+  transition: margin-left 0.4s ease;
+}
+main.menu-toggle {
+  margin-left: 6rem;
+}
+
+/* PAGE TITLE */
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== EMPLOYEE FORM ========== */
+.employee-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.employee-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+}
+.employee-form input:focus {
+  border-color: var(--primary-color);
+}
+.employee-form button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.employee-form button:hover {
+  background: var(--primary-hover);
+}
+
+/* ========== EMPLOYEE TABLE ========== */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.employee-table th,
+.employee-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+.employee-table th {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+.employee-table tr:hover {
+  background: #f1f5f9;
+}
+.employee-table a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: 500;
+}
+.employee-table a.delete {
+  color: #ef4444;
+}
+.employee-table a:hover {
+  text-decoration: underline;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .right .icon-header {
+    display: none;
+  }
+  .Sidebar {
+    width: 0;
+  }
+  .Sidebar.menu-toggle {
+    width: 14rem;
+  }
+  main {
+    margin-left: 0;
+  }
+  main.menu-toggle {
+    margin-left: 14rem;
+  }
+}
