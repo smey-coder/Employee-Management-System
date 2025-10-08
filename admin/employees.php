@@ -381,6 +381,9 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
     <button type="submit" name="add_employee" style="grid-column: span 2; background: #053D4E; color: white; padding: 12px; font-size: 16px; cursor: pointer;">
         ➕ Add Employee
     </button>
+    <button type="button" id="clearFormBtn" style="grid-column: span 2; background: #dc3545; color: white; padding: 12px; font-size: 16px; cursor: pointer;">
+    🧹 Clear Data
+    </button>
 </form>
 
 <!-- Search Bar -->
@@ -396,12 +399,12 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
 <table class="employee-table" border="1" cellspacing="0" cellpadding="5">
 <tr>
     <th>ID</th>
-    <th>Image</th>
     <th>Name</th>
     <th>Email</th>
     <th>Phone</th>
+    <th>Image</th>
     <th>Department</th>
-    <th>Joined Date</th>
+    <th>Created at</th>
     <th>Created By</th>
     <th>Actions</th>
 </tr>
@@ -422,10 +425,10 @@ if ($result && $result->num_rows > 0) {
         
         echo "<tr>
                 <td>{$row['id']}</td>
-                <td><img src='{$displayPath}' class='emp-img' alt='{$row['image']}' title='{$row['image']}'></td>
-                <td><strong>{$row['image']}</strong></td>
+                <td>{$row['name']}</td>
                 <td>{$row['email']}</td>
                 <td>{$row['phone']}</td>
+                <td><img src='{$displayPath}' class='emp-img' alt='{$row['name']}' title='{$row['name']}'></td>
                 <td>{$row['department_name']}</td>
                 <td>{$row['created_at']}</td>
                 <td>{$row['username']}</td>
@@ -464,6 +467,25 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('input[name="hire_date"]').value = today;
     document.querySelector('input[name="created_at"]').value = today;
 });
+document.getElementById('clearFormBtn').onclick = function() {
+    const form = document.querySelector('.employee-form');
+    form.reset();
+    document.getElementById('imagePreview').src = "";
+    document.getElementById('imagePreview').style.display = "none";
+    // Reset date fields to today
+    const today = new Date().toISOString().split('T')[0];
+    document.querySelector('input[name="hire_date"]').value = today;
+    document.querySelector('input[name="created_at"]').value = today;
+};
+function getEmployeeImage($imageName) {
+    $uploadPath = "../uploads/employees/" . $imageName;
+    $browserPath = "../uploads/employees/" . $imageName;
+    $defaultImage = "../assets/img/no-image.png";
+    if (!empty($imageName) && $imageName !== "default.png" && file_exists($uploadPath) && is_file($uploadPath)) {
+        return $browserPath;
+    }
+    return $defaultImage;
+}
 </script>
 </body>
 </html>

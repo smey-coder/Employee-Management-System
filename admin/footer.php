@@ -13,5 +13,6 @@
   left: 300px;
   width: calc(100% - 230px);
   font-size: 0.9rem;
+  border-radius: 8px;
 }
 </style>

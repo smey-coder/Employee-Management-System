@@ -111,7 +111,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <div class="header">
             <div class="header-left">
                 <h2 class="welcome-message">
-                    Welcome, <span class="name" id="manager-name"><?= htmlspecialchars($admin_name); ?></span>
+                    EMPLOYEE MANAGEMENT SYSTEM <span class="name" id="manager-name"></span>
                 </h2>
             </div>
             <div class="header-right">
